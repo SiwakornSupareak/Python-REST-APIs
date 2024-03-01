@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family-Poppins");
+* {
+    margin: 50;
+    padding: 20;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.image-profile {
+    height: 250;
+    width: 200;
+    border: 1px solid aqua;
+    border-width: 5px;
+}
