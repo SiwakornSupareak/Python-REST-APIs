@@ -159,7 +159,7 @@ def post_user():
     cur.close()
     return redirect('/getuser/v1/1')
 
-#DELETE API
+# DELETE API
 @app.route('/delete/<email>', methods=["DELETE"])
 def delete_user(email):
     #response = request.get_json()
@@ -173,8 +173,6 @@ def delete_user(email):
     conn.close()
     return redirect('/getuser')
 
-from flask import request, jsonify
-
 @app.route('/put_user', methods=['PUT'])
 def put_user():
     # Get JSON data from the request
@@ -186,7 +184,7 @@ def put_user():
     lastname = response['lastname']
     email = response['email']
 
-  # Update data in the database
+    # Update data in the database
     conn.reconnect()
     cur = conn.cursor()
     sql = "UPDATE memo SET firstname=%s, lastname=%s, email=%s WHERE idmemo=%s"
